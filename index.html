@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kushal Amara Chandrashekar</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="style.css">
 
     <script src="https://kit.fontawesome.com/9258d2b92b.js" crossorigin="anonymous"></script>
@@ -15,7 +14,7 @@
     <div id="header">
       <div class="container">
         <nav class="index-nav">
-          <h1><a href="#top">Kushal Amara Chandrashekar</a></h1>
+          <h1><a id="header-text" href="#top">Kushal Amara Chandrashekar</a></h1>
           <ul id="sidemenu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -242,12 +241,22 @@
       <script>
         var sidemenu=document.getElementById("sidemenu");
         function openmenu(){
-          sidemenu.style.right="0";
+          sidemenu.style.right="-100px";
         }
 
         function closemenu(){
-          sidemenu.style.right="-200px";
+          sidemenu.style.right="-400px";
         }
+        function updateHeaderText() {
+            var headerText = document.getElementById("header-text");
+            if (window.innerWidth <= 600) {
+                headerText.textContent = "Kushal";
+            } else {
+                headerText.textContent = "Kushal Amara Chandrashekar";
+            }
+        }
+
+       updateHeaderText();
       </script>
       
       <script>

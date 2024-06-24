@@ -12,7 +12,7 @@
 <body>
 
   <nav>
-    <h1><a href="../index.html#top" >Kushal Amara Chandrashekar</a></h1>
+    <h1><a id="header-text" href="../index.html#top" >Kushal Amara Chandrashekar</a></h1>
     <ul id="sidemenu">
         <li><a href="../index.html#about">About</a></li>
         <li><a href="../index.html#projects">Projects</a></li>
@@ -23,7 +23,11 @@
     <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
 </nav>
   
-<div class="project-5-intro"></div>
+<div class="project-5-intro">
+  <div class="intro-text">
+    E-Voting System
+  </div>
+</div>
 <div class="project-description-block">
 <div class="container">
     <div class="project-description">
@@ -96,13 +100,24 @@
 
 <script>
   var sidemenu = document.getElementById("sidemenu");
-  function openmenu() {
-      sidemenu.style.right = "0";
-  }
+  var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right="-100px";
+    }
 
-  function closemenu() {
-      sidemenu.style.right = "-200px";
-  }
+    function closemenu(){
+      sidemenu.style.right="-400px";
+    }
+    function updateHeaderText() {
+        var headerText = document.getElementById("header-text");
+        if (window.innerWidth <= 600) {
+            headerText.textContent = "Kushal";
+        } else {
+            headerText.textContent = "Kushal Amara Chandrashekar";
+        }
+    }
+
+    updateHeaderText();
   document.addEventListener("DOMContentLoaded", function() {
       var links = document.querySelectorAll("#sidemenu a");
       links.forEach(function(link) {
