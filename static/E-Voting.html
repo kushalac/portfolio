@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <title>E Voting</title>
+    <script src="https://kit.fontawesome.com/9258d2b92b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav>
+    <h1><a href="portfolio.html#top" >Kushal Amara Chandrashekar</a></h1>
+    <ul id="sidemenu">
+        <li><a href="../portfolio.html#about">About</a></li>
+        <li><a href="../portfolio.html#projects">Projects</a></li>
+        <li><a href="../portfolio.html#certifications" >Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
+    </ul>
+    <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+  
+<div class="project-5-intro"></div>
+<div class="project-description-block">
+<div class="container">
+    <div class="project-description">
+      <h1>E-Voting System using BlockChain & Homomorphic Encryption</h1>
+      <p>
+        The E-Voting System is a secure and tamper-proof voting platform developed using cutting-edge technologies such as blockchain technology and homomorphic encryption. This system ensures the integrity and confidentiality of votes, providing a robust and transparent voting process for eligible voters.
+      </p>
+      <a href="https://www.ijraset.com/best-journal/evoting-system-using-blockchain-technology-and-homomorphic-encryption" class="github-link">Publication Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-overview">
+  <div class="container">
+    <h1>Project Overview</h1>
+    <p>By integrating blockchain technology, the system ensures the secure and transparent storage of encrypted votes, making the ballots tamper-proof and verifiable. Homomorphic encryption techniques add an extra layer of security by preserving the confidentiality and privacy of votes during computation, guaranteeing voter anonymity and data integrity. With robust authentication mechanisms, such as unique one-time passwords sent to verified email IDs, the system ensures that only eligible voters can participate, preventing unauthorized access and maintaining the integrity of the voting process. The system comprises web-based applications tailored for different user roles: Election Officers and Booth Managers have access to administrative functions for configuring elections, managing voter details, and monitoring activities, while Users can securely cast their votes without compromising their privacy.</p>
+  <h1>Key Features</h1>
+    <ul>
+      <li>Utilizes blockchain for secure and transparent storage of encrypted votes.</li>
+      <li>Implements homomorphic encryption to ensure confidentiality and privacy of votes during computation.</li>
+      <li>Implements secure authentication mechanisms, including unique one-time passwords, for eligible voter verification.</li>
+      <li>Provides separate web-based applications for Election Officers, Booth Managers, and Users for efficient management and participation in the voting process.</li>
+      <li>Guarantees tamper-proof ballots by securely encrypting and storing votes in a decentralized blockchain system.</li>
+      <li>Maintains a transparent and verifiable record of all voting transactions using blockchain technology.</li>
+      <li>Generates comprehensive reports and analytics on voting trends and results for analysis and transparency.</li>
+    </ul>
+    <h1>Technologies Used</h1>
+    <div class="tech-stack">
+        <a href="javascript:void(0);" class="tech-item">Java</a>
+        <a href="javascript:void(0);" class="tech-item">Blockchain</a>
+        <a href="javascript:void(0);" class="tech-item">Cryptography</a>
+        <a href="javascript:void(0);" class="tech-item">MySql</a>
+        <a href="javascript:void(0);" class="tech-item">JavaScript</a>
+
+    </div>
+    <h1>Use Case</h1>
+    <p class="para-use-case">
+        Imagine a scenario where eligible voters participate in an election using the E-Voting System. Each voter receives a unique one-time password on their verified email ID, ensuring secure authentication. Voters cast their encrypted votes through the user application, and these votes are securely stored in the blockchain, maintaining transparency and integrity. Election Officers configure the election settings, while Booth Managers manage voter details and monitor voting activities. The use of homomorphic encryption ensures that votes remain confidential and tamper-proof throughout the process.
+      <br><br><br>
+    </p>
+  </div>
+</div>
+
+  
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Get in touch</h1>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/kushal-a-c/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/kushalac"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:kushalsetty2002@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="Kushal_resume.pdf" download class="btn btn2">Resume</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2 btn3">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu() {
+      sidemenu.style.right = "0";
+  }
+
+  function closemenu() {
+      sidemenu.style.right = "-200px";
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+      var links = document.querySelectorAll("#sidemenu a");
+      links.forEach(function(link) {
+          link.addEventListener("click", function(event) {
+              event.preventDefault(); // Prevent default link behavior
+              var href = link.getAttribute("href");
+              if (href.startsWith("#")) {
+                  // Smooth scroll to the anchor
+                  document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+              } else {
+                  // Redirect to the href
+                  window.location.href = href;
+              }
+          });
+      });
+  });
+</script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz9SSSqrCdhoO7idpZaQSE_EFnpP_kHlLht8ok2BYksNUfLtUaCW9GRPuFhlgENzUE/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!";
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+                console.log('Success!', response);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                msg.innerHTML = "Message failed to send. Please try again later.";
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                }, 5000);
+            });
+    });
+</script>
+
+</body>
+</html>
