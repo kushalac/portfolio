@@ -27,6 +27,7 @@
           <ul id="sidemenu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#engagement">Achievements</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
             <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
@@ -38,6 +39,11 @@
           <p>Hello,</p>
           <h1 style="color: black;">Kushal here!<span class="waving-hand">👋</span></h1>
           <p>Walking the extra mile to transcend borders of every sort</p>
+          <div class="arrow-container">
+            <button onclick="scrollToAbout()" class="down-arrow-button" aria-label="Scroll down">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -92,67 +98,170 @@
       </div>
     </div>
 
-      <!-- projects --> 
+    <!--  projects  -->
     <div id="projects">
       <div class="container">
-        <div class="project-image"></div>
+        <div class="project-image">
+          <img src="" alt="Project Preview">
+        </div>
         <div class="project-list">
           <h1 class="sub-title">Projects</h1>
           <ul>
             <li class="project-item" data-url="static/Resilent-email.html" data-image="images/project1-1.png">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">Resilent Email Notification System</div>
-              <div class="project-type">Web Application</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">Resilient Email Notification System</div>
+                    <div class="project-type">Web Application</div>
+                  </div>
+                  <div class="project-desc">
+                    A robust system designed to ensure reliable email delivery with built-in redundancy and failure handling.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">Kafka</span>
+                    <span class="tech">React</span>
+                    <span class="tech">Spring</span>
+                    <span class="tech">MongoDB</span>
+                    <span class="tech">Java</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 2 -->
             <li class="project-item" data-url="static/Language-Translator.html" data-image="images/project2-2.jpg">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">Language Translator</div>
-              <div class="project-type">Android Development</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">Language Translator</div>
+                    <div class="project-type">Android Development</div>
+                  </div>
+                  <div class="project-desc">
+                    A mobile app that leverages text and voice input to deliver seamless, near-instant translations across multiple languages, breaking down communication barriers.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">Java</span>
+                    <span class="tech">Android Studio</span>
+                    <span class="tech">Google Translate API</span>
+                    <span class="tech">Firebase</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 3 -->
             <li class="project-item" data-url="static/Hospital-Management.html" data-image="images/project3-1.jpg">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">Hospital Management System</div>
-              <div class="project-type">File Structure</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">Hospital Management System</div>
+                    <div class="project-type">File Structure</div>
+                  </div>
+                  <div class="project-desc">
+                    A Hospital Management System using B+ Trees for efficient patient data management.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">C++</span>
+                    <span class="tech">Visual Studio</span>
+                    <span class="tech">B+ Trees</span>
+                    <span class="tech">File Management</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 4 -->
             <li class="project-item" data-url="static/Book-Drive.html" data-image="images/project4-2.jpg">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">Book Drive</div>
-              <div class="project-type">Web Development </div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">Book Drive</div>
+                    <div class="project-type">Web Development</div>
+                  </div>
+                  <div class="project-desc">
+                    An online bookstore offering a seamless interface for users to browse, preview, and download a vast selection of books.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">HTML/CSS</span>
+                    <span class="tech">PHP</span>
+                    <span class="tech">Bootstrap</span>
+                    <span class="tech">Xampp</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 5 -->
             <li class="project-item" data-url="static/E-Voting.html" data-image="images/project5-1.jpg">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">E-Voting</div>
-              <div class="project-type">Web Application</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">E-Voting</div>
+                    <div class="project-type">Web Application</div>
+                  </div>
+                  <div class="project-desc">
+                    A blockchain- and homomorphic encryption-enabled e-voting platform that guarantees tamper-proof, confidential, and fully transparent elections.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">Java</span>
+                    <span class="tech">Cryptograhy</span>
+                    <span class="tech">Blockchain</span>
+                    <span class="tech">Javascript</span>
+                    <span class="tech">MySQL</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 6 -->
             <li class="project-item" data-url="static/CloudSnap.html" data-image="images/project6-1.png">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">AWS Photo Management System</div>
-              <div class="project-type">Cloud based Web Development</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">AWS Photo Management System</div>
+                    <div class="project-type">Cloud Web Application</div>
+                  </div>
+                  <div class="project-desc">
+                    An event-driven AWS application enabling secure photo uploads, automated image labeling, and elastic storage management.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">AWS Cloud9</span>
+                    <span class="tech">AWS Cognito</span>
+                    <span class="tech">AWS S3</span>
+                    <span class="tech">Amazon Rekognition</span>
+                    <span class="tech">Amazon RDS</span>
+                    <span class="tech">Amazon EC2</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
+            <!-- Card 7 -->
             <li class="project-item" data-url="static/FitGPT.html" data-image="images/project7-1.jpg">
-              <div class="project-details">
-              <span class="arrow">&rarr;</span>
-              <div class="project-name">FitGPT</div>
-              <div class="project-type">Web Application</div>
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">Fit-Gpt</div>
+                    <div class="project-type">Web Application</div>
+                  </div>
+                  <div class="project-desc">
+                    AI-driven coach that leverages Apple Watch and HealthKit data to generate personalized workout plans and real-time fitness insights.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">Python</span>
+                    <span class="tech">Flask</span>
+                    <span class="tech">OpenAI API</span>
+                    <span class="tech">Bootstrap</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
-        
+
     <!-- ---certifications -->
     <div id="certifications">
       <div class="container">
@@ -217,6 +326,111 @@
       </div>
     </div>
 
+    <!-- Engagement Section -->
+    <div id="engagement">
+      <div class="container">
+        <h1 class="sub-title">Achievements</h1>
+        <div class="engagement-list">
+          <!-- Mentorship -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-chalkboard-teacher engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Mentorship</h3>
+                <p class="engagement-desc">
+                  Guided junior students through Claylab Education Foundation to boost STEM skills and college readiness.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Academic Excellence -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-graduation-cap engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Academic Excellence</h3>
+                <p class="engagement-desc">
+                  Graduated top of class in BE Information Science & Engineering at VTU (2019–23).
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Volunteering -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-hands-helping engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Volunteering</h3>
+                <p class="engagement-desc">
+                  Supported blood-donation drives organized by the Rotaract Club of Bangalore.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Curriculum Support -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-code engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Curriculum Support</h3>
+                <p class="engagement-desc">
+                  Authored Python code and lab manuals on numerical methods for first-semester students.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Assisted -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-users engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Assisted</h3>
+                <p class="engagement-desc">
+                  Supported the Skill Development Centre in helping local students improve academic performance and pursue higher, technical, and vocational education at BIT.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Digital Advocacy -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-globe engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">Digital Advocacy</h3>
+                <p class="engagement-desc">
+                  Promoted e-KYC, Aadhaar, Skill India and Digital India initiatives to drive digital payment and identity-infrastructure adoption.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- LAHacks 2025 -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-laptop-code engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">LAHacks 2025 - Hackathon</h3>
+                <p class="engagement-desc">
+                  Developed HomeHelp, a home-maintenance assistant powered by the Gemini API.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- #HackSC 2024 -->
+          <div class="engagement-item">
+            <div class="engagement-inner">
+              <i class="fas fa-medal engagement-icon"></i>
+              <div>
+                <h3 class="engagement-title">HackSC 2024 - Hackathon</h3>
+                <p class="engagement-desc">
+                  Secured Runners-Up in the Athletes Track.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ----contact--- -->
     <div id="contact">
       <div class="container">
@@ -244,90 +458,132 @@
       </div>
     </div>
 
-       <script>
-        var tablinks=document.getElementsByClassName("tab-links");
-        var tabcontents=document.getElementsByClassName("tab-content");
-        function opentab(tabname){
-          for(var i=0;i<tablinks.length;i++){
-            tablinks[i].classList.remove("active-link");
-          }
-          for(var i=0;i<tabcontents.length;i++){
-            tabcontents[i].classList.remove("active-tab");
-          }
-          
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(tabname).classList.add("active-tab");
-        }
-       </script>  
-
-      <script>
-        var sidemenu=document.getElementById("sidemenu");
-        function openmenu(){
-          sidemenu.style.right="-100px";
-        }
-
-        function closemenu(){
-          sidemenu.style.right="-400px";
-        }
-        function updateHeaderText() {
-            var headerText = document.getElementById("header-text");
-            if (window.innerWidth <= 600) {
-                headerText.textContent = "Kushal";
-            } else {
-                headerText.textContent = "Kushal Amara Chandrashekar";
-            }
-        }
-
-       updateHeaderText();
-      </script>
-      
-      <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz9SSSqrCdhoO7idpZaQSE_EFnpP_kHlLht8ok2BYksNUfLtUaCW9GRPuFhlgENzUE/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg");
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-              msg.innerHTML="Message sent successfully!";
-              setTimeout(function(){
-                msg.innerHTML="";
-              },5000);
-              form.reset();
-              console.log('Success!', response)
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-
+    <footer id="footer">
+      <div class="footer-container">
+        <p class="footer-built">
+          Built with 
+          <i class="fas fa-heart footer-heart"></i> 
+          by Kushal Amara Chandrashekar
+        </p>
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> All rights reserved
+        </p>
+      </div>
+    </footer>
+    
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const projectItems = document.querySelectorAll('.project-list ul li');
-      const projectImageContainer = document.querySelector('.project-image');
-
-      projectItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-          const imageSrc = this.getAttribute('data-image');
-          projectImageContainer.innerHTML = `<img src="${imageSrc}" alt="Project Image" class="visible">`;
-        });
-
-        item.addEventListener('mouseout', function() {
-          projectImageContainer.innerHTML = ''; // Clear the image on mouse out
-        });
-      });
-    });
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
-
+    
     <script>
-      const projectItems = document.querySelectorAll('.project-item');
-      projectItems.forEach(item => {
-        item.addEventListener('click', function() {
-          const targetUrl = this.getAttribute('data-url');
-          window.location.href = targetUrl;
+      document.addEventListener('DOMContentLoaded', () => {
+        const urls = new Set();
+    
+        // 1) All <img> tags
+        document.querySelectorAll('img').forEach(img => {
+          if (img.src) urls.add(img.src);
+        });
+    
+        // 2) All project preview URLs
+        document.querySelectorAll('.project-item').forEach(li => {
+          const src = li.dataset.image;
+          if (src) urls.add(src);
+        });
+    
+        // 3) Any certification images
+        document.querySelectorAll('.certification-item img').forEach(img => {
+          if (img.src) urls.add(img.src);
+        });
+    
+        // Preload them all
+        urls.forEach(src => {
+          const img = new Image();
+          img.src = src;
         });
       });
     </script>
+    
+      <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-content");
+      function opentab(tabname){
+        for(var i=0;i<tablinks.length;i++){
+          tablinks[i].classList.remove("active-link");
+        }
+        for(var i=0;i<tabcontents.length;i++){
+          tabcontents[i].classList.remove("active-tab");
+        }
+        
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+      </script>  
+
+    <script>
+      var sidemenu=document.getElementById("sidemenu");
+      function openmenu(){
+        sidemenu.style.right="-100px";
+      }
+
+      function closemenu(){
+        sidemenu.style.right="-400px";
+      }
+      function updateHeaderText() {
+          var headerText = document.getElementById("header-text");
+          if (window.innerWidth <= 600) {
+              headerText.textContent = "Kushal";
+          } else {
+              headerText.textContent = "Kushal Amara Chandrashekar";
+          }
+      }
+
+      updateHeaderText();
+    </script>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz9SSSqrCdhoO7idpZaQSE_EFnpP_kHlLht8ok2BYksNUfLtUaCW9GRPuFhlgENzUE/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg");
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML="Message sent successfully!";
+            setTimeout(function(){
+              msg.innerHTML="";
+            },5000);
+            form.reset();
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <script>
+      const items = document.querySelectorAll('.project-item');
+      const imgPanel = document.querySelector('.project-image img');
+      items.forEach(li => {
+        li.addEventListener('mouseenter', () => {
+          const src = li.dataset.image;
+          imgPanel.src = src;
+          imgPanel.classList.add('visible');
+        });
+        li.addEventListener('click', () => {
+          window.location.href = li.dataset.url;
+        });
+      });
+    </script>
+
+
+
+    <script>
+      function scrollToAbout() {
+        document.getElementById('about').scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+      }
+      </script>
        
 </body>
 </html>

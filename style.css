@@ -29,8 +29,6 @@
     }
 
 /* navbar css styles */
-
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -51,7 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;   
-        margin-left: 400px; 
+        margin-left: 350px; 
         margin-right: 100px;
     }
 
@@ -136,14 +134,53 @@
         display: inline-block;
     }
 
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 14rem;
+        margin-bottom: 1rem;
+        margin-left: -15rem;
+      }
+      
+      /* Button styling */
+      .down-arrow-button {
+        background: none;
+        border: none;
+        color: #000;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+        animation: bounce 2s infinite;
+      }
+      
+      .down-arrow-button:hover {
+        color: #333;
+        transform: scale(1.1);
+      }
+      
+      /* Bounce animation */
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
 /* about css styles */
     #about{
         padding: 80px 0;
         background-color: #222831;
         color: #fff;
         line-height: 1.8;
-
     }
+    
     #about .sub-title {
         color: white; 
     }
@@ -228,98 +265,123 @@
     
     #projects .container {
         display: flex;
+        height: 500px;
         width: 100%;
     }
     
-    .project-list {
-        width: 50%;
-        margin-left: 100px;
-    }
-    
-    .project-list ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .project-list ul li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        padding: 10px 0;
-        position: relative;
-        border-bottom: 1px solid #ccc; 
-    }
-    
-    .project-list ul li:hover {
-        font-weight: bold;
-    }
-    
-    .project-details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex: 1;
-        position: relative;
-    }
-    
-    .project-name {
-        flex: 1;
-        transition: margin-left 0.3s ease;
-    }
-
-    .project-type {
-        flex: 1;
-        text-align: right;
-    }
-    
     .project-image {
-        width: 60%;
-        height: 400px; 
+        width: 50%;
+        margin-left: -40px;
+        margin-top: 85px;
         position: relative;
-        overflow: hidden;
+        background: transparent;
         border-top-right-radius: 30px;
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: hidden;
     }
     
     .project-image img {
         width: 100%;
         height: 100%;
-        object-fit: cover; 
-        transition: transform 0.0s ease;
-        border-top-right-radius: 30px; 
+        object-fit: cover;
+        object-position: center;
+        transition: object-position 0.4s ease;
         display: none;
     }
     
     .project-image img.visible {
-        display: block; 
+        display: block;
     }
     
-    .arrow {
-        visibility: hidden;
-        position: absolute;
-        left: -25px;
-        width: 0;
-        overflow: hidden;
-        transition: width 0.3s ease;
+    .project-list {
+        width: 75%;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-left: 40px;
+        margin-right: -20px;
     }
     
-    .project-list ul li:hover .arrow,
-    .project-details:hover .arrow {
-        visibility: visible;
-        width: 20px;
-        left: 0;
+    .project-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
     
-    .project-list ul li:hover .project-name,
-    .project-details:hover .project-name {
-        margin-left: 25px;
+    .project-item {
+        margin-bottom: 10px;
     }
     
+    .project-card {
+        display: flex;
+        align-items: center;          
+        padding: 20px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 12px;
+        border-left: 4px solid transparent;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        transition: border-left-color 0.2s ease;
+        min-height: 100px;         
+      }
+
+      .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+      }
+      
+      .card-arrow {
+        margin-left: 16px;  
+        font-size: 1.4rem;
+        color: #007bff;
+        flex-shrink: 0;
+      }
+    
+    .project-item:hover .project-card {
+        border-left-color: #007bff;
+    }
+    
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .project-type {
+        font-size: 0.9rem;
+        color: #555;
+        margin-right: -40px;
+    }
+    
+    .project-desc {
+        font-size: 0.9rem;
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: -20px;
+    }
+
+    .tech {
+        background: #e1e1e1;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.85rem;
+        color: #333;
+    }
+     
 /* certifications css styles */
     #certifications {
         width: 100%;
@@ -399,7 +461,7 @@
         padding: 10px;
         box-sizing: border-box;
         border-radius: 10px;
-        z-index: 2; /* Ensure the description is above the image on hover */
+        z-index: 2;
         pointer-events: none;
     }
 
@@ -407,6 +469,67 @@
         opacity: 1;
     }
 
+     /* ---- Engagement ---- */
+     #engagement {
+        padding: 50px 0;
+    }
+
+    #engagement .sub-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .engagement-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .engagement-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        transition: box-shadow 0.3s;
+    }
+
+    .engagement-item:hover {
+        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .engagement-inner {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .engagement-icon {
+        font-size: 2rem;
+        margin-right: 12px;
+        color: #3b82f6; 
+        flex-shrink: 0;
+    }
+
+    .engagement-title {
+        margin: 0 0 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e293b;
+    }
+
+    .engagement-desc {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .engagement-list .engagement-item:nth-child(1) .engagement-icon { color: #f59e0b; }
+    .engagement-list .engagement-item:nth-child(2) .engagement-icon { color: #0ea5e9; }
+    .engagement-list .engagement-item:nth-child(3) .engagement-icon { color: #10b981; }
+    .engagement-list .engagement-item:nth-child(4) .engagement-icon { color: #8b5cf6; }
+    .engagement-list .engagement-item:nth-child(5) .engagement-icon { color: #f43f5e; }
+    .engagement-list .engagement-item:nth-child(6) .engagement-icon { color: #14b8a6; }
+    .engagement-list .engagement-item:nth-child(7) .engagement-icon { color: #6366f1; }
+    .engagement-list .engagement-item:nth-child(8) .engagement-icon { color: #d97706; }
 
 /* contact css styles */
     #contact{
@@ -504,22 +627,50 @@
         display: block;
     }
 
-/* project css styles */
-
-    .intro-text {
-        font-size: 100px; /* Adjust the font size as needed */
-        color: #222831; /* Change the color as needed */
+    /* Footer */
+    #footer {
+        background: #222831; 
+        color: #fff;
         text-align: center;
-        z-index: 1; /* Ensure the text is above the background */
-        position: relative; /* Ensure the text is positioned above the background */
+        padding: 2rem 1rem;
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .footer-built {
+        margin: 0;
+        font-size: 1rem;
+        color: #cbd5e1;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-heart {
+        color: #f87171;   
+        margin: 0 0.25rem;
+    }
+    .footer-copy {
+        margin: 0.5rem 0 0;
+        font-size: 0.875rem;
+        color: #94a3b8;  
+    }
+
+/* project css styles */
+    .intro-text {
+        font-size: 100px; 
+        color: #222831; 
+        text-align: center;
+        z-index: 1; 
+        position: relative;
     }
 
     .intro-text-AWS {
-        font-size: 80px; /* Adjust the font size as needed */
-        color: #fff; /* Change the color as needed */
+        font-size: 80px; 
+        color: #fff; 
         text-align: center;
-        z-index: 1; /* Ensure the text is above the background */
-        position: relative; /* Ensure the text is positioned above the background */
+        z-index: 1; 
+        position: relative;
     }
 
     .project-1-intro {
@@ -538,7 +689,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden; 
     }
     
     .project-2-intro::before {
@@ -549,11 +700,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project2-2.jpg');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto;
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px);
+        z-index: -1;
     }
 
     .project-3-intro {
@@ -563,7 +714,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden;
     }
     
     .project-3-intro::before {
@@ -574,11 +725,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project3-1.jpg');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto;
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px);
+        z-index: -1;
     }
 
     .project-4-intro {
@@ -588,7 +739,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden; 
     }
     
     .project-4-intro::before {
@@ -599,11 +750,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project4-2.jpg');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto;
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px); 
+        z-index: -1; 
     }
 
     .project-5-intro {
@@ -613,7 +764,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden;
     }
     
     .project-5-intro::before {
@@ -624,11 +775,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project5-1.jpg');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto;
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px); 
+        z-index: -1; 
     }
 
     .project-6-intro {
@@ -638,7 +789,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden; 
     }
     
     .project-6-intro::before {
@@ -649,11 +800,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project6-1.png');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto; 
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px); 
+        z-index: -1;
     }
 
 
@@ -664,7 +815,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+        overflow: hidden; 
     }
     
     .project-7-intro::before {
@@ -675,11 +826,11 @@
         width: 100%;
         height: 100%;
         background-image: url('images/project7-1.png');
-        background-size: 50% auto; /* 50% of the container's width and auto height */
+        background-size: 50% auto; 
         background-position: center;
         background-attachment: fixed;
-        filter: blur(2px); /* Adjust the blur radius as needed */
-        z-index: -1; /* Ensure the background is behind the text */
+        filter: blur(2px); 
+        z-index: -1; 
     }
     
     .project-description-block {
@@ -766,7 +917,6 @@
     }
 
     .tech-item {
-
         display: inline-flex; 
         align-items: center; 
         justify-content: center; 
@@ -781,7 +931,6 @@
         font-size: 16px;
         width: 215x;
         height: 50px;
-
     }
     
     .tech-item:hover {
@@ -874,7 +1023,6 @@
         }
 
         /* css for project for small screen */
-
         #projects {
             flex-direction: column;
             align-items: flex-start;
