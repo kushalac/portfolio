@@ -27,6 +27,7 @@
           <ul id="sidemenu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#publication">Publication</a></li>
             <li><a href="#engagement">Achievements</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -36,9 +37,9 @@
         </nav>
       
         <div class="header-text">
-          <p>Hello,</p>
+          <p class="hello-text">Hello,</p>
           <h1 style="color: black;">Kushal here!<span class="waving-hand">👋</span></h1>
-          <p>Walking the extra mile to transcend borders of every sort</p>
+          <p class="tagline">Software Developer</p>
           <div class="arrow-container">
             <button onclick="scrollToAbout()" class="down-arrow-button" aria-label="Scroll down">
               <i class="fas fa-arrow-down"></i>
@@ -58,7 +59,7 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              I am an exceptionally driven and ambitious individual who seeks to gain a vast amount of knowledge. I am eager to involve myself in finding solutions and optimizing processes. This proactive approach allows me to tackle challenges head-on and seek efficiency in various aspects of life and work. By continuously expanding my understanding and staying informed, I aim to become a valuable asset to the world around me.
+              I'm a passionate Software Engineer with a Master's degree in Computer Science from USC (GPA: 3.88/4.00). I specialize in building scalable systems, AI-driven applications, and full-stack solutions. With hands-on experience at companies like Scry AI, Appraise AI, and Telstra, I've developed expertise in cloud architectures, microservices, and machine learning. I thrive on solving complex problems and creating innovative solutions that make a real impact.
             </p>
 
             <div class="tab-titles">
@@ -68,24 +69,48 @@
             </div>
 
             <div class="tab-content active-tab" id="skills">
-              <p><b>Programming Languages : </b>Java, Python, C/C++, Javascript, TypeScript</p>
-              <p><b>Web Development : </b>HTML, CSS, Angular, React.js, Node.js, Spring Boot, Flask, Fast API</p>
-              <p><b>Databases & DevOps : </b> MySQL, MongoDB, PostgreSQL, Docker, Kubernetes, AWS, Git, Kafka, Terraform </p>
-              <p><b>Testing Frameworks & Tools :</b>Selenium, JUnit, TestNG, Mockito, Maven, Gradle</p>
-              <p><b>Machine Learning :</b>PyTorch, Pandas, Numpy, Scikit-Learn, Matplotlib, Statsmodels, Seaborn</p>
-              <p><b>Paradigms:</b> Functional Programming, Multithreading, Multiprocessing, Event-Driven Architecture, Systems Design</p>
+              <p><b>Programming Languages:</b> Java, Python, C++, JavaScript, TypeScript, C</p>
+              <p><b>Web & Backend Frameworks:</b> React.js, Angular, Node.js, Flask, Spring Boot, FastAPI</p>
+              <p><b>Databases, Cloud & DevOps:</b> MySQL, MongoDB, PostgreSQL, Neo4j, Docker, Kubernetes, AWS, Git, Kafka, Terraform, Terragrunt</p>
+              <p><b>Testing & Build Tools:</b> Selenium, JUnit, TestNG, Mockito, Maven, Gradle</p>
+              <p><b>Machine Learning:</b> PyTorch, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, LLMs</p>
+              <p><b>Paradigms:</b> Multithreading, Multiprocessing, Event-Driven Architecture, Systems Design</p>
             </div>
 
             <div class="tab-content" id="experience">
-              <p><b>Software Engineering Intern, Scry Analytics</b> | San Jose, USA<br><I>Jun 2025 - Present</I></p>
-              <p><b>Lead Software Developer, Appraise AI</b> | Los Angeles, USA<br><I>Feb 2025 - Jun 2025</I></p>
-              <p><b>Associate Software Engineer, Telstra</b> | Bengaluru, India<br><I>Jul 2023 - Dec 2023</I></p>
-              <p><b>Business Trainee Intern, Telstra</b> | Bengaluru, India<br><I>Feb 2023 - Jul 2023</I></p>
+              <div class="experience-item">
+                <p><b>Software Engineering Intern, Scry AI</b> | San Jose, USA<br><i>Jun 2025 - Present</i></p>
+                <ul class="experience-details">
+                  <li>Built Temporal-orchestrated data-to-graph pipeline leveraging multi-model LLM workflows</li>
+                  <li>Integrated Neo4j with vector databases (Milvus, Weaviate, Qdrant, ChromaDB) for hybrid retrieval</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <p><b>Lead Software Developer, Appraise AI</b> | Los Angeles, USA<br><i>Feb 2025 - Jun 2025</i></p>
+                <ul class="experience-details">
+                  <li>Led team of 3 collecting 100,000+ property records for AI-powered appraisal system</li>
+                  <li>Architected end-to-end platform generating editable reports in 8-10 seconds using LLMs</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <p><b>Associate Software Engineer, Telstra</b> | Bengaluru, India<br><i>Jul 2023 - Dec 2023</i></p>
+                <ul class="experience-details">
+                  <li>Migrated invoice generation from iText to JasperReports, saving $80K annually</li>
+                  <li>Created Splunk dashboard for real-time event reconciliation in microservices architecture</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <p><b>Business Trainee Intern, Telstra</b> | Bengaluru, India<br><i>Feb 2023 - Jul 2023</i></p>
+                <ul class="experience-details">
+                  <li>Implemented automated Terraform and Terragrunt configurations for AWS services</li>
+                  <li>Automated GitLab group policy enforcement via webhooks</li>
+                </ul>
+              </div>
             </div>
 
             <div class="tab-content" id="education">
               <p>
-                <b>University of Southern California</b> | Los Angeles, CA<br>
+                <b>University of Southern California</b> | Los Angeles, USA<br>
                 <i>Master of Science in Computer Science, Jan 2024 – Dec 2025</i><br>
                 <b>GPA:</b> 3.88/4.00<br>
                 <b>CourseWork:</b> Analysis of Algorithms, Database Systems, Machine Learning for Data Science, Information Retrieval & Web Search Engine
@@ -94,7 +119,7 @@
                 <b>Bangalore Institute of Technology</b> | Bengaluru, India<br>
                 <i>Bachelor of Engineering in Computer Science, Aug 2019 – May 2023</i><br>
                 <b>GPA:</b> 9.41/10.00<br>
-                <b>CourseWork:</b> Data Structures, Operating Systems, Object-Oriented Concepts, Unix, Web Technologies, Artificial Intelligence, Big Data
+                <b>Coursework:</b> Data Structure, Operating Systems, Object-Oriented Concepts, Unix, Web Technologies, Artificial Intelligence, Big Data
               </p>
             </div>
           </div>
@@ -249,13 +274,37 @@
                     <div class="project-type">Web Application</div>
                   </div>
                   <div class="project-desc">
-                    AI-driven coach that leverages Apple Watch and HealthKit data to generate personalized workout plans and real-time fitness insights.
+                    Built FitGPT, a personalized platform using Apple Watch/HealthKit data & GPT-4 for adaptive fitness recommendations with React/Firebase system backed by AWS Lambda and OpenSearch.
                   </div>
                   <div class="tech-stack">
-                    <span class="tech">Python</span>
+                    <span class="tech">React</span>
+                    <span class="tech">AWS Lambda</span>
+                    <span class="tech">Firebase</span>
+                    <span class="tech">ElasticSearch</span>
+                    <span class="tech">LLM</span>
                     <span class="tech">Flask</span>
-                    <span class="tech">OpenAI API</span>
-                    <span class="tech">Bootstrap</span>
+                  </div>
+                </div>
+                <div class="card-arrow">→</div>
+              </div>
+            </li>
+            <!-- Card 8 -->
+            <li class="project-item" data-url="#" data-image="images/project5-1.jpg">
+              <div class="project-card">
+                <div class="card-content">
+                  <div class="project-header">
+                    <div class="project-name">SwarmGuard</div>
+                    <div class="project-type">Multimodal ML</div>
+                  </div>
+                  <div class="project-desc">
+                    Designed SwarmGuard using TriModal-BridgeTower architecture (BERT, ViT, GraphSAGE) for multimodal misinformation detection. Achieved 73% F1 score with parameter-efficient learning.
+                  </div>
+                  <div class="tech-stack">
+                    <span class="tech">PyTorch</span>
+                    <span class="tech">BERT</span>
+                    <span class="tech">ViT</span>
+                    <span class="tech">GraphSAGE</span>
+                    <span class="tech">Deep Learning</span>
                   </div>
                 </div>
                 <div class="card-arrow">→</div>
@@ -325,6 +374,27 @@
               <img src="images/certificate9.jpg" alt="Certificate 9">
             </a>
             <div class="certification-description">R Programming for Data Science</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publication Section -->
+    <div id="publication">
+      <div class="container">
+        <h1 class="sub-title">Publication</h1>
+        <div class="publication-list">
+          <div class="publication-item">
+            <div class="publication-inner">
+              <i class="fas fa-file-alt publication-icon"></i>
+              <div class="publication-content">
+                <h3 class="publication-title">E-Voting System Using Blockchain Technology and Homomorphic Encryption</h3>
+                <p class="publication-venue">International Journal for Research in Applied Science and Engineering Technology</p>
+                <p class="publication-desc">
+                  Published research on implementing a secure e-voting system leveraging blockchain technology for tamper-proof records and homomorphic encryption for maintaining voter privacy while ensuring transparent and verifiable elections.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -441,12 +511,15 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Get in touch</h1>
+            <p class="contact-info"><i class="fas fa-envelope"></i> kushalshetty2002@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone"></i> (213) 681-2353</p>
+            <p class="contact-info"><i class="fas fa-map-marker-alt"></i> San Jose, CA</p>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/in/kushal-a-c/"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="https://github.com/kushalac"><i class="fa-brands fa-github"></i></a>
-              <a href="mailto:kushalsetty2002@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/kushal-a-c/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://github.com/kushalac" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="mailto:kushalshetty2002@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <a href="https://drive.google.com/file/d/1schkqYOefsbz5gsuhQulP-g_HJtBTZ_A/view?usp=sharing" target="_blank" class="btn btn2">Resume</a>
+            <a href="https://drive.google.com/file/d/1schkqYOefsbz5gsuhQulP-g_HJtBTZ_A/view?usp=sharing" target="_blank" class="btn btn2">Download Resume</a>
           </div>
 
           <div class="contact-right">
@@ -587,7 +660,66 @@
           behavior: 'smooth' 
         });
       }
-      </script>
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      // Scroll reveal animation for elements
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for scroll animations
+      document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.project-card, .engagement-item, .certification-item, .publication-item');
+        elements.forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          observer.observe(el);
+        });
+
+        // Tilt effect for cards
+        const tiltCards = document.querySelectorAll('.project-card, .engagement-item');
+        tiltCards.forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+          });
+          
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+          });
+        });
+      });
+
+    </script>
        
 </body>
 </html>
